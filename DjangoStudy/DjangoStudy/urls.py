@@ -14,8 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-urlpatterns = [
+#from pybo import views #더 이상 필요하지 않음
+
+urlpatterns = [  #routing과 관련된 내용
     path('admin/', admin.site.urls),
+    path('', include('pybo.urls')),
 ]
