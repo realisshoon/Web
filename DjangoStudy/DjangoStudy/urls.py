@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-#from pybo import views #더 이상 필요하지 않음
+#from myapp import views #더 이상 필요하지 않음
 
 urlpatterns = [  #routing과 관련된 내용
     path('admin/', admin.site.urls),
-    path('', include('pybo.urls')),
+    path('', include('myapp.urls')),
 ]
