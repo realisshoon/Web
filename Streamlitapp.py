@@ -1,11 +1,15 @@
 import streamlit as st
 import pandas as pd
 
-view =[100,150,30]
-st.write('# youtube view')
-st.write('## raw')
-view
-st.write('## bar chart')
-st.bar_chart(view)
-sview=pd.Series(view)
-sview
+
+title=st.title('Hello')
+choices=st.multiselect('select your sound',["cat","dog"])
+add_selectbox=st.sidebar.selectbox(
+    "menu",
+    ("Home","select sound")
+)
+
+if add_selectbox =="select sound":
+    choices
+else:
+    print(title)
